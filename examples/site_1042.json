@@ -1,0 +1,11 @@
+{
+  "site_id": "SITE-1042",
+  "site_type": "rooftop",
+  "current_load_pct": 92,
+  "spectrum_available": true,
+  "backhaul_capacity_mbps": 450,
+  "backhaul_required_mbps": 600,
+  "power_headroom_kw": 3.2,
+  "power_required_kw": 2.8,
+  "floor_space_available": true
+}

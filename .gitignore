@@ -1,5 +1,4 @@
-@"
-.venv/
+﻿.venv/
 __pycache__/
 *.pyc
 .pytest_cache/
@@ -7,4 +6,3 @@ __pycache__/
 build/
 dist/
 .DS_Store
-"@ | Out-File -Encoding utf8 .gitignore
