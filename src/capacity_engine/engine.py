@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import logging
-
+from . import checks  
 from .config import RulesConfig
 from .models import (
     CheckResult,

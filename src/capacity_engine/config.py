@@ -16,7 +16,7 @@ class ConfigError(Exception):
 
 class CheckConfig(BaseModel):
     """Configuration for a single check."""
-    model_config = ConfigDict(extra="allow")
+    model_config = ConfigDict(extra="allow", validate_assignment=True)
 
     severity: Severity = Severity.BLOCKING
     on_fail_prerequisite: Optional[str] = None
