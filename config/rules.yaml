@@ -1,0 +1,34 @@
+version: 1
+operator: "ExampleTelco"
+
+defaults:
+  severity: blocking
+
+site_types:
+  rooftop:    [rnp, transmission, power, civil_works]
+  indoor:     [rnp, transmission, power, civil_works]
+  greenfield: [rnp, transmission, power]
+  monopole:   [rnp, transmission, power]
+
+checks:
+
+  rnp:
+    severity: blocking
+    min_load_pct: 80
+    borderline_band_pct: 3
+    require_spectrum: true
+
+  transmission:
+    severity: advisory
+    spare_capacity_pct: 20
+    borderline_band_pct: 5
+    on_fail_prerequisite: BACKHAUL_UPGRADE
+
+  power:
+    severity: blocking
+    safety_margin_kw: 0.5
+    borderline_band_kw: 0.2
+
+  civil_works:
+    severity: advisory
+    on_fail_prerequisite: CIVIL_WORKS_REQUIRED
